@@ -69,7 +69,7 @@ const FormLogin = () => {
     }
     return (
         <form onSubmit={handleLogin}>
-            <h3 className='text-white mb-5'>Sign In</h3>
+            <h3 className='text-orange-400 font-bold text-3xl mb-5'>Sign In</h3>
             {/* <InputForm 
             label={<span className="block font-semibold mb-1 text-slate-100 after:content-['*'] after:text-pink-500 after:ml-0.5">Username</span>}
             type="text"
@@ -77,13 +77,13 @@ const FormLogin = () => {
             name="username"></InputForm> */}
 
             <InputForm 
-            label={<span className="block font-semibold mb-1 text-slate-100 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>}
+            label={<span className="block font-semibold mb-1 text-black after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>}
             type="email"
             placeholder="example@mail.com"
             name="email"></InputForm>
 
             <InputForm 
-            label={<span className="block font-semibold mb-1 text-slate-100 after:text-pink-500 after:ml-0.5">Password <i className="toggle-password" onClick={togglePasswordVisibility}>{showPassword ? '👁️' : '👁️‍🗨'}</i></span>}
+            label={<span className="block font-semibold mb-1 text-black after:text-pink-500 after:ml-0.5">Password <i className="toggle-password" onClick={togglePasswordVisibility}>{showPassword ? '👁️' : '👁️‍🗨'}</i></span>}
             type={showPassword ? 'text': 'password'}
             placeholder="******"
             name="password"></InputForm>

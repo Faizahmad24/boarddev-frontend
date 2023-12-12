@@ -48,29 +48,30 @@ const FormRegister = () => {
     }
     return (
         <form onSubmit={handleRegister}>
+            <h3 className='text-orange-400 font-bold text-3xl mb-5'>Sign Up</h3>
             <InputForm
-            label={<span className="block font-semibold mb-1 text-slate-100 after:text-pink-500 after:ml-0.5">Fullname</span>}
+            label={<span className="block font-semibold mb-1 text-black after:text-pink-500 after:ml-0.5">Fullname</span>}
             name="fullname"
             placeholder="Insert your name here"
             type="text"
             />
 
              <InputForm
-            label={<span className="block font-semibold mb-1 text-slate-100 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>}
+            label={<span className="block font-semibold mb-1 text-black after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>}
             name="email"
             placeholder="example@mail.com"
             type="email"
             />
 
              <InputForm
-            label={<span className="block font-semibold mb-1 text-slate-100 after:text-pink-500 after:ml-0.5">Password <i className="toggle-password" onClick={togglePasswordVisibility}>{showPassword ? '👁️' : '👁️‍🗨'}</i></span>}
+            label={<span className="block font-semibold mb-1 text-black after:text-pink-500 after:ml-0.5">Password <i className="toggle-password" onClick={togglePasswordVisibility}>{showPassword ? '👁️' : '👁️‍🗨'}</i></span>}
             name="newPassword"
             placeholder="******"
             type={showPassword ? 'text': 'password'}
             />
 
              <InputForm
-            label={<span className="block font-semibold mb-1 text-slate-100 after:text-pink-500 after:ml-0.5">Confirm Password <i className="toggle-password" onClick={toogleConfirmPasswordVisibility}>{showConfirmPassword ? '👁️' : '👁️‍🗨'}</i></span>}
+            label={<span className="block font-semibold mb-1 text-black after:text-pink-500 after:ml-0.5">Confirm Password <i className="toggle-password" onClick={toogleConfirmPasswordVisibility}>{showConfirmPassword ? '👁️' : '👁️‍🗨'}</i></span>}
             name="confirmNewPassword"
             placeholder="******"
             type={showConfirmPassword ? 'text': 'password'}

@@ -5,7 +5,7 @@ const AuthLayout = (props) => {
     return (
         <section className='pt-36'>
             <div className='container'>
-                <div className='border border-slate-50 shadow-slate-50 rounded-lg p-5 max-w-lg m-auto shadow-md bg-dark'>
+                <div className='border border-slate-200  rounded-lg p-5 max-w-lg m-auto shadow-lg '>
                     {children}
 
                 {/* <div className='text-center'> */}
@@ -22,9 +22,16 @@ const AuthLayout = (props) => {
 const Navigation = ({type}) => {
     if ( type === 'login') {
         return (
-            <p className='mt-6 text-center text-white'>
+        <p className='mt-6 text-center text-black'>
             Dont have an account?
             <Link className='font-bold text-orange-400' to="/register"> Sign Up</Link>
+        </p>
+        )
+    } else {
+        return (
+        <p className='mt-6 text-center text-black'>
+            Already have an account?
+            <Link className='font-bold text-orange-400' to="/"> Sign In</Link>
         </p>
         )
     }

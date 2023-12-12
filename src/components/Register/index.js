@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { redirect } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
-import FormRegister from '../Fragments/FormRegister'
+import RegisterPage from '../../pages/register'
 
 
 export default function Register() {
@@ -88,35 +88,37 @@ export default function Register() {
 
   
   return (
-    <section className='pt-36'>
-        <div className='container'>
-          <div className='border border-slate-50 shadow-slate-50 rounded-lg p-5 max-w-lg m-auto shadow-md bg-dark'>\
-          <FormRegister></FormRegister>
-             {/* <form onSubmit={handleRegister}>
-                <h3 className='text-white mb-5'>Sign Up</h3>
-                <label for="username">
-                  <span className="block font-semibold mb-1 text-slate-100 after:text-pink-500 after:ml-0.5">Fullname</span>
-                  <input id="username" type="text" name='fullName' value={formData.fullName} onChange={handleInputChange} placeholder="Masukkan Username" className="px-3 py-2 border shadow-md rounded w-full block text-sm placeholder:text-slate-400  mb-4"/>
-                </label>
-                <label for="email">
-                  <span className="block font-semibold mb-1 text-slate-100 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>
-                  <input id="email" type="email" placeholder="Masukkan Email" name='email' value={formData.email} onChange={handleInputChange} className="px-3 py-2 border shadow-md rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 peer"/>
-                  <p className="text-sm m-1 text-pink-500 invisible peer-invalid:visible">Email Invalid</p>
-                </label>
-                <label for="password">
-                  <span className="block font-semibold mb-1 text-slate-100 after:text-pink-500 after:ml-0.5">Password <i className="toggle-password" onClick={togglePasswordVisibility}>{showPassword ? '👁️' : '👁️‍🗨'}</i></span>
-                  <input id="password" type={showPassword ? 'text': 'password'} placeholder="Masukkan Password" name='newPassword'  value={formData.newPassword} onChange={handleInputChange} className="px-3 py-2 border shadow-md rounded w-full block text-sm placeholder:text-slate-400 mb-4"/>
-                </label>
-                <label for="confirm">
-                  <span className="block font-semibold mb-1 text-slate-100 after:text-pink-500 after:ml-0.5">Confirm Password <i className="toggle-password" onClick={togglePasswordVisibility}>{showPassword ? '👁️' : '👁️‍🗨'}</i></span>
-                  <input id="confirm" type={showPassword ? 'text': 'password'} placeholder="Konfirmasi Password" name='confirmNewPassword' value={formData.confirmNewPassword} onChange={handleInputChange} className="px-3 py-2 border shadow-md rounded w-full block text-sm placeholder:text-slate-400 mb-10"/>
-                </label>
-                <div className='flex justify-center w-full mb-5'>
-                  <button className="text-white w-full bg-orange-400 p-2 border rounded-lg shadow-md shadow-slate-500">Register</button>
-                </div>
-              </form> */}
-          </div>
-        </div>
-      </section>
+    // <section className='pt-36'>
+    //     <div className='container'>
+    //       <div className='border border-slate-50 shadow-slate-50 rounded-lg p-5 max-w-lg m-auto shadow-md bg-dark'>
+    //          <form onSubmit={handleRegister}>
+    //             <h3 className='text-white mb-5'>Sign Up</h3>
+    //             <label for="username">
+    //               <span className="block font-semibold mb-1 text-slate-100 after:text-pink-500 after:ml-0.5">Fullname</span>
+    //               <input id="username" type="text" name='fullName' value={formData.fullName} onChange={handleInputChange} placeholder="Masukkan Username" className="px-3 py-2 border shadow-md rounded w-full block text-sm placeholder:text-slate-400  mb-4"/>
+    //               {/* <p className="text-sm m-1 text-pink-700 invisible">Email Invalid</p> */}
+    //             </label>
+    //             <label for="email">
+    //               <span className="block font-semibold mb-1 text-slate-100 after:content-['*'] after:text-pink-500 after:ml-0.5">Email</span>
+    //               <input id="email" type="email" placeholder="Masukkan Email" name='email' value={formData.email} onChange={handleInputChange} className="px-3 py-2 border shadow-md rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 peer"/>
+    //               <p className="text-sm m-1 text-pink-500 invisible peer-invalid:visible">Email Invalid</p>
+    //             </label>
+    //             <label for="password">
+    //               <span className="block font-semibold mb-1 text-slate-100 after:text-pink-500 after:ml-0.5">Password <i className="toggle-password" onClick={togglePasswordVisibility}>{showPassword ? '👁️' : '👁️‍🗨'}</i></span>
+    //               <input id="password" type={showPassword ? 'text': 'password'} placeholder="Masukkan Password" name='newPassword'  value={formData.newPassword} onChange={handleInputChange} className="px-3 py-2 border shadow-md rounded w-full block text-sm placeholder:text-slate-400 mb-4"/>
+    //             </label>
+    //             <label for="confirm">
+    //               <span className="block font-semibold mb-1 text-slate-100 after:text-pink-500 after:ml-0.5">Confirm Password <i className="toggle-password" onClick={togglePasswordVisibility}>{showPassword ? '👁️' : '👁️‍🗨'}</i></span>
+    //               <input id="confirm" type={showPassword ? 'text': 'password'} placeholder="Konfirmasi Password" name='confirmNewPassword' value={formData.confirmNewPassword} onChange={handleInputChange} className="px-3 py-2 border shadow-md rounded w-full block text-sm placeholder:text-slate-400 mb-10"/>
+    //             </label>
+    //             <div className='flex justify-center w-full mb-5'>
+    //               <button className="text-white w-full bg-orange-400 p-2 border rounded-lg shadow-md shadow-slate-500">Register</button>
+    //             </div>
+    //           </form>
+    //       </div>
+    //     </div>
+    //   </section>
+
+    <RegisterPage></RegisterPage>
   )
 }
