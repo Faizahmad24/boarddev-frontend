@@ -3,9 +3,11 @@ const AuthLayout = (props) => {
     const {children, type} = props
     console.log(type)
     return (
-        <section className='pt-36'>
-            <div className='container'>
-                <div className='border border-slate-200  rounded-lg p-5 max-w-lg m-auto shadow-lg '>
+        // <section className=''>
+              
+        // </section>
+            <div className='flex min-h-screen'>
+                <div className='border border-slate-200  rounded-lg p-5 w-full max-w-lg m-auto shadow-lg '>
                     {children}
 
                 {/* <div className='text-center'> */}
@@ -14,8 +16,6 @@ const AuthLayout = (props) => {
                 {/* </div> */}
             </div>
                 </div>
-              
-        </section>
     )
 }
 

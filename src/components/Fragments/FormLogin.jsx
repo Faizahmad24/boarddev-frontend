@@ -54,12 +54,21 @@ const FormLogin = () => {
         password: e.target.password.value
       }
 
+      console.log(data.email)
+      console.log(data.password)
+
+      if (data.email === "" || data.password === "") {
+        alert("form must be filled")
+        return
+      }
+
       login(data, (status, res) => {
-        console.log(res.accessToken)
+        // console.log(res.user.fullName)
         console.log(status)
         if (status) {
           localStorage.setItem('token', res.accessToken)
-          // window.location.href = "/register"
+          localStorage.setItem('userName', res.user.fullName)
+          window.location.href = "/dashboard"
         } else {
           setLoginFailed(res)
         }

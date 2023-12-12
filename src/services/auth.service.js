@@ -14,7 +14,7 @@ const login = (data, callback) => {
     console.log(response)
     response.then((response) => response.json())
     .then(function(json){
-        console.log(json)
+        // console.log(json.user.fullName)
         callback(true, json)
     })
     .catch(function(error){
